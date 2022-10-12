@@ -1,0 +1,434 @@
+﻿:root {
+    --pug-size: 25px;
+ 
+}
+
+    
+
+
+
+
+.tiles_nothing {
+
+    background-color: transparent !important;
+
+
+    outline: transparent !important;
+    pointer-events: none !important;
+
+    box-shadow: 5px 10px transparent !important;
+    opacity: 0;
+    
+
+
+}
+
+#tile_grid {
+    
+
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+
+}
+
+#tile_grid2 {
+
+
+    width: 80%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+
+
+
+
+}
+
+@media screen and (min-height: 844px) {
+
+    #tile_grid {
+
+
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+
+    }
+
+    #tile_grid2 {
+
+
+        width: 80%;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+
+
+
+
+    }
+}
+
+@media screen and (min-height: 1000px) {
+
+    #tile_grid {
+
+
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+
+    }
+
+    #tile_grid2 {
+
+
+        width: 80%;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+
+
+
+
+    }
+}
+
+@media screen and (min-height: 1368px) {
+
+    #tile_grid {
+
+
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+
+    }
+
+    #tile_grid2 {
+
+
+        width: 80%;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+
+
+
+
+    }
+}
+
+
+.tiles_image {
+    
+
+    height: 80%;
+    pointer-events: none;
+    
+  
+    margin: 12px 18px;
+    float: left;
+
+    
+   
+    
+}
+
+
+
+.tile {
+    
+    width: 90px;
+    height: 90px;
+
+    text-align: center;
+
+
+    pointer-events: bounding-box;
+
+
+    display: inline-block;
+    
+    margin-left: 0.5em;
+    
+
+
+    border-radius: 2px 2px 2px 2px;
+
+
+    animation: createTile .25s;
+   
+    
+    
+
+}
+
+@keyframes createTile {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes removeTile {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+    }
+}
+
+@keyframes pulse{
+    25%  {transform: scale(0.9);}
+    75%  {transform: scale(1.1);}
+}
+
+.faded_tile {
+    opacity: 0.5 !important;
+    filter: brightness(.7);
+}
+
+#moves_left {
+    
+    width: 100%;
+    height: 90px;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    
+    background-color: #00BC4C;
+    border-radius: 10px;
+    margin-bottom: 10px; 
+ 
+    
+
+
+}
+
+
+
+#level_title {
+    padding-bottom: 2.5%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#timer_div {
+    margin-bottom: 10px;
+    
+    width: 100%;
+    
+    text-align: center;
+
+}
+
+#play-area {
+    
+    width: 90%;
+    height: 95vh;
+
+    
+    margin-left: auto;
+    margin-right: auto;
+
+    
+    text-align: center;
+}
+
+.moves_left_image {
+    width: 65%;
+    height: auto;
+
+    
+    margin-left: 4px;
+    margin-top: 7px;
+}
+
+.moves_left_column {
+    width: 16%;
+    height: 70%;
+    
+    display: inline-block;
+    
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    
+    
+background-color: white;
+   
+
+    
+}
+
+@keyframes pop{
+    50%  {transform: scale(1.2);}
+}
+
+
+.hide {
+    display: none;
+    visibility: hidden;
+}
+
+
+#menu-div {
+
+
+   
+    position: absolute;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    transform: translate(-50%, -50%); /* This is a shorthand of
+                                         translateX(-50%) and translateY(-50%) */
+
+    z-index: 5;
+
+
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+
+    width: 100%;
+    height: 100%;
+
+
+    outline: none;
+
+
+
+}
+
+#overlay-div {
+
+
+    position: absolute;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    transform: translate(-50%, -50%); /* This is a shorthand of
+                                         translateX(-50%) and translateY(-50%) */
+
+    z-index: 5;
+
+
+    background-color: rgb(255, 255, 255);
+    color: white;
+
+    width: 80%;
+    height: 50%;
+
+    border-radius: 20px;
+
+
+    outline: none;
+
+    text-align: center;
+
+
+}
+
+span {
+    color: black;
+}
+
+
+#title {
+
+    position: absolute;
+    top: 20%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    transform: translate(-50%, -50%); /* This is a shorthand of
+                                         translateX(-50%) and translateY(-50%) */
+    width: 70%;
+    font-weight: bold;
+    font-size: 1.5em;
+
+}
+
+#description {
+    position: absolute;
+    top: 45%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    width: 100%;
+
+    transform: translate(-50%, -50%); /* This is a shorthand of
+                                         translateX(-50%) and translateY(-50%) */
+}
+
+#restart-button {
+    position: absolute;
+    top: 85%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    width: 80%;
+    height: 50px;
+
+    background-color: royalblue;
+    border: none;
+    border-radius: 10px;
+    color: white;
+
+    transform: translate(-50%, -50%); /* This is a shorthand of
+                                         translateX(-50%) and translateY(-50%) */
+
+}
+
+#next-level-button {
+    position: absolute;
+    top: 65%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    width: 80%;
+    height: 50px;
+
+    background-color: royalblue;
+    border: none;
+    border-radius: 10px;
+    color: white;
+
+    transform: translate(-50%, -50%); /* This is a shorthand of
+                                         translateX(-50%) and translateY(-50%) */
+
+}
+

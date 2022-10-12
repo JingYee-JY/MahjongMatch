@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi, user-scalable=no" />
+
+    <title>Mahjong Match</title>
+
+ 
+    <link rel="stylesheet" href="./css/index.css">
+
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Arimo">
+</head>
+
+<body >
+    <img id="cacher">   
+
+    <div id="main_screen"  w3-include-html="./pages/main_screen.html"></div>
+    <div id="selection_screen" class="hide" w3-include-html="./pages/selection.html"></div>
+    <div id="game_screen" class="hide" w3-include-html="./pages/game.html"></div>
+    <div id="results_screen" class="hide" w3-include-html="./pages/results_screen.html"></div>
+
+
+
+
+
+
+</body>
+
+
+<script src="js/w3.js"></script>
+<script>
+    //to bring in other HTML on the fly into this page
+    w3.includeHTML();
+</script>
+
+<script type="module" src="js/index.js"></script>
+
+
+</html>
