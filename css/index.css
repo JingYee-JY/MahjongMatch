@@ -47,3 +47,31 @@ body {
 
     margin-top: 4em;
 }
+
+/*ipad*/
+@media screen and (min-width: 768px) and (max-width: 1199px){
+    .middle_content{
+        width: 700px;
+    }
+    #start_button, #easy_button, #normal_button, #hard_button{
+        width: 50% !important;
+    }
+}
+
+/*desktop*/
+@media screen and (min-width:1200px){
+    .middle_content,#game_screen, #results_content{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    #game_picture{
+        width: 60% !important;
+    }
+
+    #start_button {
+        margin-top: 10px;
+    }
+    #start_button, #easy_button, #normal_button, #hard_button{
+        width: 60% !important;
+    }
+}
